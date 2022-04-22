@@ -25,17 +25,15 @@ def createBoard(name, team):
 
 def createKanban(team):
     board = createBoard('Kanban', team)
-    board.add_list('Terminado')
-    board.add_list('Revisión')
-    board.add_list('En proceso')
-    board.add_list('Para hacer')
+    lists = ['Terminado', 'Revisión', 'En proceso', 'Para hacer']
+    for item in lists:
+        board.add_list(item)
 
 def createBacklog(team):
     board = createBoard('Backlog', team)
-    board.add_list('Bloqueado')
-    board.add_list('Terminado')
-    board.add_list('Sprint Backlog')
-    board.add_list('Backlog')
+    lists = ['Bloqueado', 'Terminado', 'Sprint Backlog', 'Backlog']
+    for item in lists:
+        board.add_list(item)
 
 def createPlanning(team):
     board = createBoard('Área de planificación', team)
