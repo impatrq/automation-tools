@@ -45,3 +45,7 @@ def createPlanning(team):
     hu001 = board.add_list('HU001')
     for epic in epics:
         hu001.add_card(epic)
+
+def importTeams():
+    return pd.read_csv(trelloPath + '/teams.csv')
+
