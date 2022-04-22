@@ -1,3 +1,5 @@
+# coding=utf-8
+import pandas as pd
 from dotenv import load_dotenv
 from trello import TrelloClient
 import os
