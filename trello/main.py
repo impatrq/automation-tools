@@ -49,3 +49,12 @@ def createPlanning(team):
 def importTeams():
     return pd.read_csv(trelloPath + '/teams.csv')
 
+def onBoardingProcessStage():
+    df = importTeams()
+    for index, row in df.iterrows():
+        team = createTeam(row['year'], row['course'], row['group'], row['name'])
+        createKanban(team)
+        createBacklog(team)
+        createPlanning(team)
+
+onBoardingProcessStage()
