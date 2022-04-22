@@ -30,3 +30,18 @@ def createKanban(team):
     board.add_list('En proceso')
     board.add_list('Para hacer')
 
+def createBacklog(team):
+    board = createBoard('Backlog', team)
+    board.add_list('Bloqueado')
+    board.add_list('Terminado')
+    board.add_list('Sprint Backlog')
+    board.add_list('Backlog')
+
+def createPlanning(team):
+    board = createBoard('Área de planificación', team)
+    epics = ['HU001C', 'HU001B', 'HU001A']
+    for epic in epics:
+        board.add_list(epic)
+    hu001 = board.add_list('HU001')
+    for epic in epics:
+        hu001.add_card(epic)
