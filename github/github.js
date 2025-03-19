@@ -43,7 +43,7 @@ function getTeams() {
  */
 function createTeams() {
   // URL para la API de GitHub
-  const url = 'https://api.github.com/orgs/${org}/teams';
+  const url = `https://api.github.com/orgs/${org}/teams`;
   // Consigue los nombres de los equipos del spreadsheet
   const teams = getTeams();
 
@@ -65,7 +65,7 @@ function createTeams() {
  */
 function createRepos() {
   // URL para crear un repo
-  const url = 'https://api.github.com/orgs/${org}/repos';
+  const url = `https://api.github.com/orgs/${org}/repos`;
   // Busco el nombre de los equipos
   const repoNames = getTeams().map(team => {
     const foo = team.split('_');
